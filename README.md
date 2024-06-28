@@ -1,3 +1,8 @@
+## About TechPlanet
+
+This is just a rebuilding of my first project built with knowledge of one month of learning laravel <a href="https://github.com/projecthanif/TechPlanet_"> Link here </a>, 
+After 5 month of learning laravel want to rebuild that 
+same project to check out my progress 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
