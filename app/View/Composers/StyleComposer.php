@@ -2,14 +2,12 @@
 
 namespace App\View\Composers;
 
-
 use Illuminate\Support\Facades\Route;
 use Illuminate\View\View;
 
 class StyleComposer
 {
-
-    public function compose(View $view)
+    public function compose(View $view): void
     {
         $link = $this->links();
 
@@ -17,7 +15,7 @@ class StyleComposer
 
         $view->with([
             'link' => $link,
-            'banner' => $banner
+            'banner' => $banner,
         ]);
     }
 
@@ -47,7 +45,8 @@ class StyleComposer
         if ($routeName === 'index') {
             return '';
         }
-        return "assets/css/jumbo.css";
+
+        return 'assets/css/jumbo.css';
     }
 
     private function getRouteName(): string

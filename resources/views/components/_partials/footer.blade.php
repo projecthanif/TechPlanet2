@@ -5,7 +5,7 @@
     <div class="footer">
         <div class="foot-content">
             <div class="nav-logo">
-                <img src="assets/image/64-bit.png" alt="" class="logo" />
+                <img src="{{asset('assets/image/64-bit.png')}}" alt="" class="logo"/>
                 <h1 class="nav-logo-text">
                     <span class="cr-red">Tech</span>Planet
                 </h1>
@@ -18,22 +18,22 @@
             </p>
         </div>
         <div class="foot-content">
-            <h1 class="foot-title">Quicks Links</h1>
+            <h1 class="foot-title">Quick's Links</h1>
             <ul class="links">
                 <li class="list-link">
-                    <a href="index.html" class="foot-links">Home</a>
+                    <a href="{{route('index')}}" class="foot-links">Home</a>
                 </li>
                 <li class="list-link">
-                    <a href="shop.html" class="foot-links">Shop</a>
+                    <a href="{{route('shop')}}" class="foot-links">Shop</a>
                 </li>
                 <li class="list-link">
-                    <a href="about.html" class="foot-links">About</a>
+                    <a href="{{route('about')}}" class="foot-links">About</a>
                 </li>
                 <li class="list-link">
-                    <a href="blog.html" class="foot-links">Blog</a>
+                    <a href="{{route('blog')}}" class="foot-links">Blog</a>
                 </li>
                 <li class="list-link">
-                    <a href="contact.html" class="foot-links">Contact</a>
+                    <a href="{{route('contact')}}" class="foot-links">Contact</a>
                 </li>
             </ul>
         </div>
