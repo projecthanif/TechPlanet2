@@ -3,7 +3,7 @@
         <section>
             <div class="jumbotron">
                 <div class="link">
-                    <a href="index.html" class="link index-link">
+                    <a href="{{route('index')}}" class="link index-link">
                         <h4 class="index">Home</h4>
                     </a>
                     >
