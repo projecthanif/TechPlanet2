@@ -21,7 +21,7 @@ return new class extends Migration {
             $table->decimal('weight')->nullable();
             $table->string('color')->nullable();
             $table->string('image_url');
-            $table->string('gallery_url');
+            $table->json('gallery_url');
             $table->unsignedInteger('sale_price');
             $table->date('sale_start_date');
             $table->date('sale_end_date');
