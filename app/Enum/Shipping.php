@@ -2,13 +2,9 @@
 
 namespace App\Enum;
 
-class Shipping
+enum Shipping
 {
-    /**
-     * Create a new class instance.
-     */
-    public function __construct()
-    {
-        //
-    }
+    case Pending;
+    case Shipped;
+    case Delivered;
 }
