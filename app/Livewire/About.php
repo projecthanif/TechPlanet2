@@ -11,3 +11,4 @@ class About extends Component
         return view('livewire.about');
     }
 }
+
