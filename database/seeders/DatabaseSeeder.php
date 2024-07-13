@@ -22,12 +22,16 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        User::factory()->create([
-            'name' => 'admin',
-            'email' => 'admin@admin.com',
-            'password' => bcrypt('password')
-        ]);
+//        User::factory()->create([
+//            'first_name' => 'admin',
+//            'last_name' => 'admin',
+//            'email' => 'admin@admin.com',
+//            'password' => bcrypt('password')
+//        ]);
 
+
+        Tag::factory(10)
+            ->create();
         BlogCategory::factory(10)
             ->create();
         Blog::factory(10)
@@ -38,8 +42,6 @@ class DatabaseSeeder extends Seeder
         Category::factory(10)
             ->create();
         Product::factory(10)
-            ->create();
-        Tag::factory(10)
             ->create();
 
     }

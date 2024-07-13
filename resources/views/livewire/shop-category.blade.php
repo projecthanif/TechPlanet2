@@ -14,25 +14,25 @@
         </div>
     </section>
     @include('components._partials.sidebar')
-    <main @style('margin-bottom:200px')>
+    <main @style('margin-bottom:350px')>
         <article>
             <!-- PRODUCT CARD -->
             <div class="product-card">
                 <!-- CARD -->
                 @foreach($products as $product)
-                    @include('components._partials.item_card', $product)
+                    @include('components._partials.item_card', ['product' => $product])
                 @endforeach
             </div>
             <div class="pagination">
                 {{$products->links()}}
-                {{--                <ul class="pagin">--}}
-                {{--                    <li class="pagin-list">--}}
-                {{--                        <a href="#" class="pagin-link active">1</a>--}}
-                {{--                    </li>--}}
-                {{--                    <li class="pagin-list">--}}
-                {{--                        <a href="#" class="pagin-link">2</a>--}}
-                {{--                    </li>--}}
-                {{--                </ul>--}}
+{{--                <ul class="pagin">--}}
+{{--                    <li class="pagin-list">--}}
+{{--                        <a href="#" class="pagin-link active">1</a>--}}
+{{--                    </li>--}}
+{{--                    <li class="pagin-list">--}}
+{{--                        <a href="#" class="pagin-link">2</a>--}}
+{{--                    </li>--}}
+{{--                </ul>--}}
             </div>
         </article>
     </main>

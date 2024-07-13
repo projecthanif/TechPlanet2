@@ -12,3 +12,5 @@ Route::get('/shop', Shop::class)->name('shop');
 Route::get('/about', About::class)->name('about');
 Route::get('/blog', Blog::class)->name('blog');
 Route::get('/contact', Contact::class)->name('contact');
+
+Route::get('/shop/{category}', \App\Livewire\ShopCategory::class)->name('shop.category');

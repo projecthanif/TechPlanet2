@@ -15,14 +15,16 @@
         <div class="product-type">
             <div class="p-title">Product Categories</div>
             <ul class="categories">
-                <li><a href="#" class="prod-list-link active">All</a></li>
-                <li><a href="" class="prod-list-link">Laptops</a></li>
-                <li><a href="" class="prod-list-link">Smart Tv</a></li>
-                <li><a href="" class="prod-list-link">Headphones</a></li>
-                <li><a href="" class="prod-list-link">Gadgets</a></li>
-                <li><a href="" class="prod-list-link">Speakers</a></li>
-                <li><a href="" class="prod-list-link">Gaming</a></li>
-                <li><a href="" class="prod-list-link">Uncategorized</a></li>
+                <li><a href="{{route('shop')}}" class="prod-list-link {{$parameter === null ? 'active' : ''}}">All</a>
+                </li>
+                @foreach($categories as $category)
+                    <li>
+                        <a href="/shop/{{$category->name}}"
+                           class="prod-list-link {{$parameter === $category->name ? 'active' : ''}}">
+                            {{$category->name}}
+                        </a>
+                    </li>
+                @endforeach
             </ul>
         </div>
         <div class="price-range">

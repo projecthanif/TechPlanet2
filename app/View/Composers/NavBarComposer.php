@@ -4,26 +4,14 @@ namespace App\View\Composers;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\View\View;
+use App\Helpers\ViewHelper;
 
 class NavBarComposer
 {
     public function compose(View $view)
     {
         return $view->with([
-            'route' => $this->getRouteName()
+            'route' => ViewHelper::getMainRouteName()
         ]);
-    }
-
-    private function getRouteName(): string
-    {
-
-        $routeName = Route::currentRouteName();
-
-        $arr = explode('.', $routeName);
-        if (count($arr) > 1) {
-            $routeName = $arr[0];
-        }
-
-        return $routeName;
     }
 }

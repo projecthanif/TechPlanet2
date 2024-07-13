@@ -2,6 +2,7 @@
 
 namespace App\View\Composers;
 
+use App\Helpers\ViewHelper;
 use Illuminate\Support\Facades\Route;
 use Illuminate\View\View;
 
@@ -21,7 +22,7 @@ class StyleComposer
 
     private function links(): string
     {
-        $routeName = $this->getRouteName();
+        $routeName = ViewHelper::getMainRouteName();
 
         $link = match ($routeName) {
             'about' => 'about',
@@ -40,7 +41,7 @@ class StyleComposer
 
     private function hasBanner(): string
     {
-        $routeName = $this->getRouteName();
+        $routeName = ViewHelper::getMainRouteName();
 
         if ($routeName === 'index') {
             return '';
@@ -49,16 +50,5 @@ class StyleComposer
         return 'assets/css/jumbo.css';
     }
 
-    private function getRouteName(): string
-    {
 
-        $routeName = Route::currentRouteName();
-
-        $arr = explode('.', $routeName);
-        if (count($arr) > 1) {
-            $routeName = $arr[0];
-        }
-
-        return $routeName;
-    }
 }
