@@ -230,16 +230,16 @@ main {
   padding: 10px;
 }
 
-li.pagin-list {
+.pagin-list {
   float: left;
 }
 
-li.pagin-list,
-a.pagin-link {
+.pagin-list,
+.pagin-link {
   padding: 5px;
 }
 
-a.pagin-link.active {
+.pagin-link.active {
   background-color: #7e7e7e;
   border: none;
   border-radius: 5px;

@@ -17,7 +17,7 @@ return new class extends Migration {
             $table->foreignId('author_id')->constrained('users')->cascadeOnDelete()->cascadeOnUpdate();
             $table->date('published_at');
             $table->string('status')->default('draft');
-            $table->foreignId('category_id')->constrained('blog_categories')->restrictOnDelete()->cascadeOnUpdate();
+            $table->foreignId('blog_category_id')->constrained('blog_categories')->restrictOnDelete()->cascadeOnUpdate();
             $table->json('tags');
             $table->longText('excerpt');
             $table->string('slug');

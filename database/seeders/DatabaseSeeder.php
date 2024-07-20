@@ -4,13 +4,8 @@ namespace Database\Seeders;
 
 use App\Models\Blog;
 use App\Models\BlogCategory;
-use App\Models\Brand;
-use App\Models\Category;
-use App\Models\Product;
 use App\Models\Tag;
 use App\Models\User;
-
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -20,29 +15,21 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-
-//        User::factory()->create([
-//            'first_name' => 'admin',
-//            'last_name' => 'admin',
-//            'email' => 'admin@admin.com',
-//            'password' => bcrypt('password')
-//        ]);
-
+         User::factory(10)->create();
+        User::factory()->create([
+            'name' => 'admin',
+            'email' => 'admin@admin.com',
+            'password' => bcrypt('password')
+        ]);
 
         Tag::factory(10)
             ->create();
         BlogCategory::factory(10)
-            ->create();
-        Blog::factory(10)
-            ->create();
-
-        Brand::factory(10)
-            ->create();
-        Category::factory(10)
-            ->create();
-        Product::factory(10)
+            ->has(Blog::factory(10), 'blog')
             ->create();
 
+        $this->call([
+            ProductSeeder::class
+        ]);
     }
 }

@@ -5,7 +5,6 @@
     <link rel="stylesheet" href="{{asset($link)}}"/>
     <link rel="stylesheet" href="{{asset('assets/css/footer.css')}}"/>
     <link rel="stylesheet" href="{{asset($banner)}}"/>
-    {{--    <link rel="stylesheet" href="{{asset('assets/css/jumbo.css')}}"/>--}}
     <link rel="stylesheet" href="{{asset('assets/fontawesome/css/all.min.css')}}"/>
     <link
         rel="stylesheet"

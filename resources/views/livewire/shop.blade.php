@@ -18,13 +18,16 @@
         <article>
             <!-- PRODUCT CARD -->
             <div class="product-card">
+{{--                <form wire:submit="paste">--}}
+{{--                    <button>paste</button>--}}
+{{--                </form>--}}
                 <!-- CARD -->
                 @foreach($products as $product)
                     @include('components._partials.item_card', $product)
                 @endforeach
             </div>
             <div class="pagination">
-                {{$products->links()}}
+                {{ $products->links('components._partials.custom') }}
                 {{--                <ul class="pagin">--}}
                 {{--                    <li class="pagin-list">--}}
                 {{--                        <a href="#" class="pagin-link active">1</a>--}}

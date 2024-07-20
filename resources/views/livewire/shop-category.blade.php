@@ -24,15 +24,14 @@
                 @endforeach
             </div>
             <div class="pagination">
-                {{$products->links()}}
-{{--                <ul class="pagin">--}}
-{{--                    <li class="pagin-list">--}}
-{{--                        <a href="#" class="pagin-link active">1</a>--}}
-{{--                    </li>--}}
-{{--                    <li class="pagin-list">--}}
-{{--                        <a href="#" class="pagin-link">2</a>--}}
-{{--                    </li>--}}
-{{--                </ul>--}}
+                <ul class="pagin">
+                    <li class="pagin-list">
+                        <a href="#" class="pagin-link active">1</a>
+                    </li>
+                    <li class="pagin-list">
+                        <a href="#" class="pagin-link">2</a>
+                    </li>
+                </ul>
             </div>
         </article>
     </main>

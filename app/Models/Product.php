@@ -49,4 +49,9 @@ class Product extends Model
     {
         return $this->belongsTo(Inventory::class);
     }
+
+    public function cartItem():BelongsTo
+    {
+        return $this->belongsTo(CartItem::class);
+    }
 }
